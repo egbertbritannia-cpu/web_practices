@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #2c3e50;
+            background-color: rgb(236, 243, 246);
+            border-radius: 25px;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .box {
+            border: 1px solid #606778;
+            border-radius: 25px;
+            padding: 15px;
+            color: #2c3e50;
+            margin-top: 20px;
+            background-color: rgb(231, 241, 245);
+        }
+
+        a {
+            color: #799cd1;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            border-bottom: 1px solid #0066ff;
+        }
+
+        .greyblue{
+            color: #6582ad;
+        }
+
+        .learnMore::after {
+            content: '➔';
+            list-style-type: none;
+        }
+
+        code {
+            background-color: #d8e3ef;
+            padding: 2px 4px;
+            border: #799cd1;
+            border-radius: 25px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+            <h2 class="greyblue">JS Maps Conclusion</h2>
+        <p class="greyblue"> In this tutorial, we looked at four uses of the <code>.map()</code> 
+            method in JavaScript. In combination with other methods, the functionality 
+            of <code>.map()</code> can be extended. For more information, see our <a href="#">
+            How To Use Array Methods in JavaScript: Iteration Methods</a> article.</p>
+
+        <div class="box">
+            <p class="greyblue">
+            Want to deploy your application quickly? Try Cloudways, 
+            the #1 managed hosting provider for small-to-medium businesses, 
+            agencies, and developers - for free. DigitalOcean and Cloudways 
+            together will give you a reliable, scalable, and hassle-free managed 
+            hosting experience with anytime support that makes all your hosting worries 
+            a thing of the past. Start with $100 in free credits!
+            </p>
+            <a href="#" class="learnMore">Learn more here </a> 
+        </div>
+    </div>
+</body>
+</html>

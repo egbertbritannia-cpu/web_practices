@@ -1,11 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            padding: 50px;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            padding: 20px 60px;
+        }
+
+        .text {
+            font-style: italic;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        
+        .icon {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: #cccccc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .icon-left {
+            top: -30px;
+            left: -10px;
+        }
+
+        .icon-right {
+            bottom: -30px;
+            right: -10px;
+        }
+
+    </style>
 </head>
 <body>
-    
+
+    <div class="container">
+        <div class="icon icon-left">“</div>
+        <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+            commodo consequat.
+        </p>
+        <div class="icon icon-right">”</div>
+    </div>
+
 </body>
 </html>
