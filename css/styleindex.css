@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f7f6; /* Màu nền xám nhạt thanh lịch */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 3rem;
+    color: #1a2a44;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container > ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.container > ul > li {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container > ul > li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.container > ul > li > a {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #d4a373; 
+    text-decoration: none;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.container ul ul {
+    list-style: none;
+}
+
+.container ul ul li {
+    margin-bottom: 8px;
+}
+
+.container ul ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.container ul ul li a::before {
+    content: "↪";
+    margin-right: 8px;
+    color: #ccc;
+}
+
+.container ul ul li a:hover {
+    color: #1a2a44;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    .container > ul { grid-template-columns: 1fr; }
+}
