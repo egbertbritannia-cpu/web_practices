@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <style> 
+            input[type="checkbox"] {
+            display: none;
+        }
+ 
+        label {
+            display: flex;
+            align-items: center;
+            background-color: #d35400;  
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            border-bottom: 1px solid #e67e22;
+        }
+ 
+        .icon::before {
+            content: "+";
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            transition: all 0.4s ease;  
+            }
+
+        .content p {
+            padding: 20px;
+            margin: 0;
+            line-height: 1.6;
+        }
+        /* Khi checkbox được tích, mở rộng chiều cao nội dung */
+        input:checked ~ .content {
+        max-height: 200px; /* Số này phải đủ lớn để chứa hết văn bản */
+        border: 1px solid #ddd;
+        }
+
+        /* Khi checkbox được tích, đổi dấu + thành dấu - */
+        input:checked ~ label .icon::before {
+        content: "-";
+        }
+
+        /* Đổi màu tiêu đề khi mở (tùy chọn) */
+        input:checked ~ label {
+        background-color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <div class="accordion">
+    <div class="item">
+        <input type="checkbox" id="faq-1">
+        <label for="faq-1">
+        <span class="icon"></span> How to set random colors?
+        </label>
+        <div class="content">
+        <p>To set random colors, add the jag-faq-random-colors class...</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <input type="checkbox" id="faq-2">
+        <label for="faq-2">
+        <span class="icon"></span> How to change icon?
+        </label>
+        <div class="content">
+        <p>You can change the icon by modifying the pseudo-elements in CSS.</p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
