@@ -1,0 +1,30 @@
+ body { 
+    font-family: Arial, sans-serif; 
+    padding: 20px;
+    text-align: center; 
+}
+.input-group { 
+    margin: 15px auto;
+}
+
+input { 
+    padding: 8px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    margin-right: 10px;
+}
+
+button { 
+    background-color: #f1b332; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+}
+
+.container { 
+    border: 1px solid #ccc;  
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px ; 
+}
