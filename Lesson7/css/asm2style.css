@@ -1,0 +1,153 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito';
+  background: #f2f2f2;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+    display: flex;  
+    overflow: hidden;
+
+    width: 800px;
+    min-height: 400px;
+    max-width: 95%;
+
+    background: #fff;
+    border-radius: 10px;
+    margin: 0 auto;  
+}   
+
+.login-form-left { 
+    background-color: #ff574d;  
+    padding: 50px 30px;
+    flex: 0 0 40%;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+.login-form-right {    
+    padding: 50px 40px;
+    flex: 0 0 60%;
+    text-align: center;
+} 
+
+.logo{ 
+    font-weight: bold;
+    color: #ff574d;
+    background-color: #f8eded;
+    padding: 0 8px;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.login-form-left h2 {
+    margin: 20px 0; 
+    font-size: 24px;
+}
+
+.btn-readmore {
+    font-weight: bold;
+    font-family: 'Nunito';
+    background-color: #faf3f3;
+    color: #ff574d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    margin-bottom: 15px;
+    width: 150px;
+}
+
+.introduce { 
+    font-size: 14px;   
+    margin: 30px 0;
+}
+
+.infor i {  
+    background-color: #c14943;   
+    border-radius: 5px; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 30px;
+}
+ 
+
+.login-form-right h2 span {
+  color: #e85c4f;
+}
+
+.login-form-right h2 {
+    margin-bottom: 30px; 
+    font-size: 24px;
+} 
+
+.checkbox {
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+a{
+    color: #e85c4f;
+    text-decoration: none;
+}
+
+.login input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+.login input:focus {
+  border-color: #e85c4f;
+}
+
+.btn-login{
+    background: #e85c4f;
+    width: 100%;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    font-family: 'Nunito';
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.btn-login:hover {
+    background-color: #ff574d;
+}
+
+.register {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+
+
+
+
