@@ -1,52 +1,102 @@
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 8px;
-}
-
 *{
-    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Asap', sans-serif;
 }
-.menu{
+
+body{
+    margin: 0 85px;
+}
+
+.title{
+    text-align: left;
+    color: #cf5351;
+    margin: 20px 0px;
+} 
+
+.menu-container{
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    list-style-type: none;
+    justify-content: center;
+    gap: 15px;
 }
 
-.left{
+.menu-container li{ 
+    text-align: center;    
     display: flex;
+    border-radius: 80px;
+    flex-direction: column;  /* xếp a và p theo chiều dọc */
+    align-items: center;     /* căn giữa ngang */
+    justify-content: center; /* căn giữa dọc */
+}
+
+.menu-container li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: #daafae;
+    border-radius: 80px;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    font-size: 15px; 
+    padding: 10px 15px; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-container li a span{
+    display: block;
+    font-size: 11px; 
+    margin-top: 6px; 
+    font-style: oblique;
+}
+
+.menu-container li a:hover, .menu-container li:hover{
+    background-color: #c5794a;
+    color: white; 
+}
+ 
+.districts-container img{
+    width: 100%; 
+    height: 100%; 
+    filter: brightness(70%);
+    position: relative;
+    object-fit: cover;
+}
+
+.districts-container{ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    align-items: center;
+    margin: 20px 0;
 }
 
-.link{
-    text-decoration: none; 
-    font-weight: bold;
-    color: rgb(0, 0, 0); 
-    border-radius: 5px; 
-    
-}
-
-.logo{
-    width: 120px;
-    height: auto;
-}
-
-.category{
-    background-color: #efeeee;
-    border-radius: 25px;
-    padding: 10px;
-    border: none;
-    font-size: 14px; 
-}
-
-.cta{   
-    background: linear-gradient(to right, #5d3fd1, #9a7bff);
+.district-container{
+    position: relative; 
     color: white;
-    text-decoration: none; 
-    padding: 10px 20px;
-    border-radius: 5px; 
+    height: 230px;
+    box-shadow: 1px 1px 1px #3f3424;
+}
+
+.district-container h4{
+    position: absolute;
+    color: white;
+    left: 10px;
+    top: 10px; 
+    font-size: 20px;
+    z-index: 1;
+    margin: 20px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.8)
+}
+
+.district-container p{
+    position: absolute;
+    left: 10px;
+    bottom: 10px; 
+    font-variant: small-caps;
+    font-size: larger;
+    z-index: 1;
+    margin: 20px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.8)
 }
