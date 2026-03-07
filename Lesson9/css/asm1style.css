@@ -1,0 +1,254 @@
+:root {
+    --color-text-dark: #1a1a2e;
+    --color-text-muted: #6b7280;
+    --color-dot: #5cb88a;         
+    --color-dot-hover: #965151;
+    --color-badge-default: #e5e7eb;
+    --color-badge-hover: #9c6b4e;  /* Màu badge khi hover - nâu ấm */
+    --color-badge-text-default: #374151;
+    --color-badge-text-hover: #ffffff;
+    --color-heading-hover: #1a1a2e;
+    --color-line: #e5e7eb;         /* Đường kẻ dọc giữa timeline */
+    --transition-speed: 0.6s;     /* Tất cả animation dùng cùng tốc độ */
+    --dot-size: 12px;
+    --dot-offset: 175px;
+    --gap: 50px; /* Khoảng cách giữa 2 cột */
+    --col-width: 50%; /* Width mỗi cột */
+  }
+
+body{ 
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+h3 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.container{
+    display: flex;
+    gap: 20px; 
+}
+
+.timeline-container{ 
+    width: 55%;
+    margin-left: 50px;
+    margin-top: 20px;
+} 
+
+.timeline-item{
+    position: relative;
+    display: flex;  
+    align-items: flex-start;
+}
+
+.content-container, .time{
+    width: var(--col-width); 
+    position: relative; 
+    padding-bottom: 20px;
+    margin-bottom: 20px; 
+}
+
+.content-container{    
+    border-radius: 5px;
+    text-align: right; 
+    margin-right: 50px;
+    transition: transform var(--transition-speed) ease; 
+} 
+
+.time{    
+    margin-top: 10px;  
+    padding: 0 10px;
+    transition: color var(--transition-speed) ease,
+              transform var(--transition-speed) ease;
+}
+
+.time::before{
+    background-color:  var(--color-dot);
+    content: "";
+    position: absolute;
+    display: block;
+    top: -1px;
+    left: -50px; 
+    width: var(--dot-size);
+    height: var(--dot-size); 
+    margin: 20px;
+    z-index: 2;
+    box-shadow: rgb(224, 242, 239) 0px 0px 0px 3px;
+    border-radius: 50%; 
+    transition: left var(--transition-speed) ease,
+                color var(--transition-speed) ease,
+              transform var(--transition-speed) ease; 
+}
+
+.time::after {
+    background-color: var(--color-line); 
+    content: "";
+    position: absolute;
+    display: block;
+    left: -25px;
+    top: 23px; 
+    width: 2px;
+    height: var(--dot-offset); 
+    z-index: 1;
+    transition: left var(--transition-speed) ease,
+                color var(--transition-speed) ease,
+              transform var(--transition-speed) ease; 
+}
+
+.content-container .law-button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--color-badge-default);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 50px;
+    transition: background-color var(--transition-speed) ease,
+                color var(--transition-speed) ease;
+}
+
+.timeline-item:hover .content-container {
+    transform: translateX(380px);
+    text-align: left;
+}
+
+.timeline-item:hover .time { 
+    transform: translateX(-380px); 
+} 
+
+.timeline-item:hover .time p{ 
+    transform: translateX(220px);
+} 
+
+.timeline-item:hover .time::before,
+.timeline-item:hover .time::after {  
+    transform: translateX(380px); 
+} 
+
+.timeline-item:hover .time::before {  
+    box-shadow: rgb(224, 242, 239) 0px 0px 0px 6px;
+    background-color: var(--color-dot-hover);
+} 
+
+.timeline-item:hover .law-button {
+    background-color: var(--color-badge-hover);
+    color: var(--color-badge-text-hover);
+    text-align: center;
+}
+
+.image-wrapper {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    height: 500px;
+    margin-top: 40px;
+}
+
+.main-img {
+    width: 70%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.sub-img {
+    width: 60%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.award-box {
+    position: absolute;
+    left: 14px; 
+    top: 154px;
+    width: 170px;
+    height: 290px;
+    background: linear-gradient(180deg, #ebebeb, #9196c4);
+    z-index: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.award-box h3 {
+    font-size: 80px;
+    font-weight: 700;
+    margin: 0; 
+    color: transparent;
+    background-image: url(../../imgs/big-ben-lock.jpg);
+    background-size: cover;
+    background-clip: text;
+}
+
+.award-box p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    color: rgba(255,255,255,0.8);
+}
+
+@media (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+        gap:40px;
+        align-items: flex-start;
+    }
+
+    .timeline-container{
+        width: 90%;
+    }
+
+    .time{
+        width:100%;
+        text-align:left;
+    } 
+
+    .content-container{
+        width:100%;
+        text-align:right;
+    }
+
+    .time::before{
+        left:-35px;
+    }
+
+    .time::after{
+        left:-10px;
+    }
+ 
+    .timeline-item:hover .content-container{
+        transform: translateX(260px);
+    }
+
+    .timeline-item:hover .time{
+        transform: translateX(-160px);
+    }
+
+    .timeline-item:hover .time p{
+        transform: translateX(30px);
+    }
+
+    .timeline-item:hover .time::before,
+    .timeline-item:hover .time::after{
+        transform: translateX(160px);
+    }
+
+    .image-wrapper{
+        margin: 0 auto;
+    }
+
+}
+
+
+
