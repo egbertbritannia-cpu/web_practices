@@ -4,104 +4,129 @@
     <meta charset="UTF-8">
     <title>swapNumbers</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/ex17.css">
+    <link rel="stylesheet" href="ex17.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Swap two numbers</h2>
-    
-        <div class="input-group">
-            <input type="number" id="numA1" placeholder="Enter number A">
-            <input type="number" id="numB1" placeholder="Enter number B">
+    <div class="container-container">
+        <div class="container">
+            <h2>Swap two numbers</h2>
+        
+            <div class="input-group">
+                <input type="number" id="numA1" placeholder="Enter number A">
+                <input type="number" id="numB1" placeholder="Enter number B">
+            </div>
+
+            <button onclick="swapNumbers()">swap</button>
+
+            <p id="result1" style="margin-top: 20px; font-weight: bold;"></p>
+        </div>
+        
+        <div class="container">
+            <h2>Find the largest number</h2>
+        
+            <div class="input-group">
+                <input type="number" id="numA2" placeholder="Enter number A">
+                <input type="number" id="numB2" placeholder="Enter number B">
+                <input type="number" id="numC2" placeholder="Enter number C">
+            </div>
+
+            <button onclick="findLargest()">Find Largest</button>
+
+            <p id="result2" style="margin-top: 20px; font-weight: bold;"></p>
         </div>
 
-        <button onclick="swapNumbers()">swap</button>
+        <div class="container">
+            <h2>check the same sign numbers</h2>
+        
+            <div class="input-group">
+                <input type="number" id="numA3" placeholder="Enter number A">
+                <input type="number" id="numB3" placeholder="Enter number B"> 
+            </div>
 
-        <p id="result1" style="margin-top: 20px; font-weight: bold;"></p>
-    </div>
-    
-    <div class="container">
-        <h2>Find the largest number</h2>
-    
-        <div class="input-group">
-            <input type="number" id="numA2" placeholder="Enter number A">
-            <input type="number" id="numB2" placeholder="Enter number B">
-            <input type="number" id="numC2" placeholder="Enter number C">
+            <button onclick="checkSameSign()">Check Same Sign</button>
+
+            <p id="result3" style="margin-top: 20px; font-weight: bold;"></p>
         </div>
 
-        <button onclick="findLargest()">Find Largest</button>
+        <div class="container">
+            <h2>Organize numbers in ascending order</h2>
+        
+            <div class="input-group">
+                <input type="number" id="numA4" placeholder="Enter number A">
+                <input type="number" id="numB4" placeholder="Enter number B"> 
+                <input type="number" id="numC4" placeholder="Enter number C">
+            </div>
 
-        <p id="result2" style="margin-top: 20px; font-weight: bold;"></p>
-    </div>
+            <button onclick="organizeNumbers()">Organize</button>
 
-    <div class="container">
-        <h2>check the same sign numbers</h2>
-    
-        <div class="input-group">
-            <input type="number" id="numA3" placeholder="Enter number A">
-            <input type="number" id="numB3" placeholder="Enter number B"> 
+            <p id="result4" style="margin-top: 20px; font-weight: bold;"></p>
         </div>
 
-        <button onclick="checkSameSign()">Check Same Sign</button>
+        <div class="container">
+            <h2>Taxi Charge Calculator</h2>
+        
+            <div class="input-group">
+                <input type="number" id="numA5" placeholder="Enter kilpometers traveled:"> 
+            </div>
 
-        <p id="result3" style="margin-top: 20px; font-weight: bold;"></p>
-    </div>
+            <button onclick="taxiCharge()">Calculate</button>
 
-    <div class="container">
-        <h2>Organize numbers in ascending order</h2>
-    
-        <div class="input-group">
-            <input type="number" id="numA4" placeholder="Enter number A">
-            <input type="number" id="numB4" placeholder="Enter number B"> 
-            <input type="number" id="numC4" placeholder="Enter number C">
+            <p id="result5" style="margin-top: 20px; font-weight: bold;"></p>
         </div>
 
-        <button onclick="organizeNumbers()">Organize</button>
+        <div class="container">
+            <h2>Electricity Charge Calculator</h2>
+        
+            <div class="input-group">
+                <input type="number" id="numA6" placeholder="Enter consumption (kWh):"> 
+            </div>
 
-        <p id="result4" style="margin-top: 20px; font-weight: bold;"></p>
-    </div>
+            <button onclick="electricityConsumed()">Calculate</button>
 
-    <div class="container">
-        <h2>Taxi Charge Calculator</h2>
-    
-        <div class="input-group">
-            <input type="number" id="numA5" placeholder="Enter kilpometers traveled:"> 
+            <p id="result6" style="margin-top: 20px; font-weight: bold;"></p>
         </div>
 
-        <button onclick="taxiCharge()">Calculate</button>
+        <!-- Bài 7: Tính giá trị biểu thức
+        Cho trước số nguyên n. Tính giá trị biểu thức sau
+        S= 1*2 + 2*3 + 3*4 + ... + n*(n+1) -->
+        <div class="container">
+            <h2>Calculate expression value</h2>
+        
+            <div class="input-group">
+                <input type="number" id="numA7" placeholder="Enter an integer n:"> 
+            </div>
 
-        <p id="result5" style="margin-top: 20px; font-weight: bold;"></p>
-    </div>
+            <button onclick="calculateExpression()">Calculate</button>
 
-    <div class="container">
-        <h2>Electricity Charge Calculator</h2>
-    
-        <div class="input-group">
-            <input type="number" id="numA6" placeholder="Enter consumption (kWh):"> 
+            <p id="result7" style="margin-top: 20px; font-weight: bold;"></p>
         </div>
 
-        <button onclick="electricityConsumed()">Calculate</button>
+        <!-- Bài 8: Viết hàm kiểm tra số nguyên tố
+        Viết 1 hàm kiểm tra 1 số có phải số nguyên tố hay không?
 
-        <p id="result6" style="margin-top: 20px; font-weight: bold;"></p>
-    </div>
+        Hàm có 1 tham số là số cần kiểm tra
+        Hàm có giá trị trả về
+        Gọi hàm trong câu điều kiện if else -->
+        <div class="container">
+            <h2>Check Prime Number</h2>
+        
+            <div class="input-group">
+                <input type="number" id="numA8" placeholder="Enter an integer n:"> 
+            </div>
 
-    <!-- Bài 7: Tính giá trị biểu thức
-    Cho trước số nguyên n. Tính giá trị biểu thức sau
-    S= 1*2 + 2*3 + 3*4 + ... + n*(n+1) -->
+            <button onclick="isPrimeNumber()">Check</button>
 
-    <div class="container">
-        <h2>Calculate expression value</h2>
-    
-        <div class="input-group">
-            <input type="number" id="numA7" placeholder="Enter an integer n:"> 
+            <p id="result8" style="margin-top: 20px; font-weight: bold;"></p>
         </div>
 
-        <button onclick="calculateExpression()">Calculate</button>
+        <div class="container mutipleTable">
+            <h2>Display Mutiple Table</h2> 
 
-        <p id="result7" style="margin-top: 20px; font-weight: bold;"></p>
+            <button onclick="displayMutipleTable()">Display</button>
+
+            <p id="result9" style="margin-top: 20px; font-weight: bold;"></p>
+        </div>
     </div>
-
-    
-    <script src="../js/ex17script.js"></script>
+    <script src="ex17script.js"></script>
 </body>
 </html>

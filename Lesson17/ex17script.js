@@ -129,5 +129,54 @@ function calculateExpression(){
     }
     let result = (x * x) + (2 * x) + 1;
     document.getElementById('result7').innerText = `Result of the expression x^2 + 2x + 1 is: ${result}`;
-    
+}
+
+function isPrimeNumber(){ 
+    let number = parseFloat(document.getElementById('numA8').value);
+
+    if (isPrime(number)) { 
+        document.getElementById('result8').innerText = `${number} is a prime number`;
+    } else { 
+        document.getElementById('result8').innerText = `${number} is not a prime number`;
+    }  
+}
+
+function isPrime(x){ 
+    if (x == 2 || x == 3) return true;
+    if(x < 2) return false
+    for(let i =2; i <= Math.sqrt(x); i++){
+        if ( x % i === 0) return false;
+    }
+    return true;
+} 
+
+function mutipleTable(){ 
+
+    let result = "";
+
+    for(let i = 1; i <= 10; i++){
+        for(let j = 1; j <= 10; j++){
+            result += `${i} x ${j} = ${i*j}&nbsp;&nbsp;&nbsp;`;
+            if(j == 10) result += `<br>`;
+        }
+    }
+
+    document.getElementById('result9').innerHTML = result;
+}
+
+function displayMutipleTable(){ 
+
+    let result = "<table border='1' cellpadding='25px'>";
+
+    for(let i = 1; i <= 10; i++){
+        result += "<tr>";
+        for(let j = 1; j <= 10; j++){
+            result += `<td>${i} x ${j} = ${i*j}</td>`;
+        }
+        result += "</tr>";
+    }
+
+    result += "</table>";
+
+    document.getElementById('result9').innerHTML = result;
 }
