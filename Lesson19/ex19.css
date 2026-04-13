@@ -1,0 +1,91 @@
+ 
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+    text-align: center;
+}
+
+/* Title */
+h1{
+    margin-top: 30px;
+    font-size: 36px;
+}
+
+/* Layout chính */
+.container-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* Card cho mỗi bài */
+.container{
+    background: white;
+    width: 320px;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+/* Hover card */
+.container:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Title trong card */
+.container h2{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Input group */
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Input */
+input{
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Button */
+button{
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #f1b332;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+/* Hover button */
+button:hover{
+    background: #d89c1f;
+}
+
+/* Result */
+p{
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}

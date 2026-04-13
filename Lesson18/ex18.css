@@ -1,0 +1,131 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: center center no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.container{ 
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 30px;
+    box-shadow: 6px 6px 12px rgba(0,0,0,0.15),
+                -6px -6px 12px rgba(255,255,255,0.7);
+}
+
+.container input{
+    width: 80%;
+    height: 40px;
+    margin: 10px; 
+    box-shadow: 6px 6px 12px rgba(0,0,0,0.15),
+                -6px -6px 12px rgba(255,255,255,0.7);
+    padding: 12px 28px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.45); /* viền kính mỏng */
+    
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.2px; /*tracking âm nhẹ */
+    cursor: pointer;
+
+    /* Liquid glass effect */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.12),          /* shadow ngoài nhẹ */
+        inset 0 1px 0 rgba(255, 255, 255, 0.7),  /* specular highlight trên */
+        inset 0 -1px 0 rgba(0, 0, 0, 0.08);      /* bóng tối dưới */
+
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* iOS spring */
+}
+
+.container input:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.06); 
+}
+
+.container input:active {
+    transform: scale(0.97); /* nhẹ hơn */
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 2px 6px rgba(0, 0, 0, 0.08); /* pressed effect */
+    transition-duration: 0.08s;
+}
+
+.container input:focus {
+    outline: none;
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ios-btn {
+    padding: 12px 28px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.45); /* viền kính mỏng */
+    
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.2px; /*tracking âm nhẹ */
+    cursor: pointer;
+
+    /* Liquid glass effect */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.12),          /* shadow ngoài nhẹ */
+        inset 0 1px 0 rgba(255, 255, 255, 0.7),  /* specular highlight trên */
+        inset 0 -1px 0 rgba(0, 0, 0, 0.08);      /* bóng tối dưới */
+
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* iOS spring */
+}
+
+.ios-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.06); 
+}
+
+.ios-btn:active {
+    transform: scale(0.97); /* nhẹ hơn */
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 2px 6px rgba(0, 0, 0, 0.08); /* pressed effect */
+    transition-duration: 0.08s;
+}
+  
+.container p{
+    margin: 20px;
+    font-size: 18px;
+    color: #333;
+}
