@@ -1,91 +1,131 @@
- 
+
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f6f9;
-    text-align: center;
+    background: center center no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;  
+    align-items: center;
+    justify-items: center;
 }
 
-/* Title */
-h1{
-    margin-top: 30px;
-    font-size: 36px;
-}
-
-/* Layout chính */
-.container-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px;
-}
-
-/* Card cho mỗi bài */
-.container{
-    background: white;
-    width: 320px;
-    padding: 25px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: 0.2s;
-}
-
-/* Hover card */
-.container:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* Title trong card */
-.container h2{
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-/* Input group */
-.input-group{
+.container{ 
+    width: 90%; 
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 30px;
+    box-shadow: 6px 6px 12px rgba(0,0,0,0.15),
+                -6px -6px 12px rgba(255,255,255,0.7);
 }
 
-/* Input */
-input{
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 14px;
-}
-
-/* Button */
-button{
-    margin-top: 15px;
-    padding: 10px;
-    border: none;
-    background: #f1b332;
-    color: white;
-    border-radius: 5px;
+.container input{
+    width: 80%;
+    height: 40px;
+    margin: 10px; 
+    box-shadow: 6px 6px 12px rgba(0,0,0,0.15),
+                -6px -6px 12px rgba(255,255,255,0.7);
+    padding: 12px 28px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.45); /* viền kính mỏng */
+    
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.2px; /*tracking âm nhẹ */
     cursor: pointer;
-    font-size: 15px;
-    transition: 0.2s;
+
+    /* Liquid glass effect */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.12),          /* shadow ngoài nhẹ */
+        inset 0 1px 0 rgba(255, 255, 255, 0.7),  /* specular highlight trên */
+        inset 0 -1px 0 rgba(0, 0, 0, 0.08);      /* bóng tối dưới */
+
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* iOS spring */
 }
 
-/* Hover button */
-button:hover{
-    background: #d89c1f;
+.container input:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.06); 
 }
 
-/* Result */
-p{
-    margin-top: 15px;
-    font-weight: bold;
+.container input:active {
+    transform: scale(0.97); /* nhẹ hơn */
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 2px 6px rgba(0, 0, 0, 0.08); /* pressed effect */
+    transition-duration: 0.08s;
+}
+
+.container input:focus {
+    outline: none;
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ios-btn {
+    margin: 10px 0;
+    padding: 12px 28px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.45); /* viền kính mỏng */
+    
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.2px; /*tracking âm nhẹ */
+    cursor: pointer;
+
+    /* Liquid glass effect */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.12),          /* shadow ngoài nhẹ */
+        inset 0 1px 0 rgba(255, 255, 255, 0.7),  /* specular highlight trên */
+        inset 0 -1px 0 rgba(0, 0, 0, 0.08);      /* bóng tối dưới */
+
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* iOS spring */
+}
+
+.ios-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.06); 
+}
+
+.ios-btn:active {
+    transform: scale(0.97); /* nhẹ hơn */
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 2px 6px rgba(0, 0, 0, 0.08); /* pressed effect */
+    transition-duration: 0.08s;
+}
+  
+.container p{
+    margin: 20px;
+    font-size: 18px;
     color: #333;
 }
