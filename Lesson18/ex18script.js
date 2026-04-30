@@ -34,7 +34,7 @@ function generateFibonacci(inputId) {
 // Ví dụ: Khi gọi hàm và truyền đối số 12345 sẽ trả về kết quả 54321
 function inverseNumber(inputId) { 
     const element = document.getElementById(inputId).value; 
-
+    const num = Number(element);
     if (isNaN(num) || num < 0 || !Number.isInteger(num)) {
         alert("Please enter a valid non-negative number!");
         return;
