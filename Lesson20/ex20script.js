@@ -56,7 +56,7 @@ function arrayHelper(input){
 function setIntersection(array1, array2){
     const arr1 = arrayHelper(array1);
     const arr2 = arrayHelper(array2);
-    let arr = array1.filter(x => arr2.includues(x));
+    let arr = arr1.filter(x => arr2.includes(x));   
     return arr;
 }
 
