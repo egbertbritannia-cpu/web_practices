@@ -45,6 +45,14 @@ function arrayHelper(input){
     return arr;
 }
 
+function parseInput(input){
+    if(!input.trim()) return "Please enter data";
+    try {
+        return JSON.parse(input);
+    } catch {
+        return null;
+    }
+}
 //logic
 /* 
     Bài 1
@@ -67,8 +75,28 @@ var arr = [0, 1, [2, 3], [4, 5, [6, 7]], [8, [9, 10, [11, 12]]]];
 Kết quả
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 */
+function handleFlattenRecursive(arr){
+    let result = [];
+
+    arr.forEach(item => {
+        if(Array.isArray(item)){
+            result = result.concat(handleFlattenRecursive(item));
+        } else {
+            result.push(item);
+        }
+    });
+
+    return result;
+}
+
 function flattenArray(input){
-    const arr = arrayHelper(input); 
+    const arr = parseInput(input); 
+    
+    if(Array.isArray(arr)){
+            return handleFlattenRecursive(arr).join(', ');
+        } else {
+            return 'error: array cannot be parse';
+        }
 }
 
 /* 
